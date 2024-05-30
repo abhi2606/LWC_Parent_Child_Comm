@@ -1,0 +1,19 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+      <div slot="title">
+          Component A
+      </div>
+      <div>
+        <lightning-input 
+          type="text"
+          label="Enter some text"
+          onkeyup={inputTextHandler}
+        ></lightning-input>
+        <lightning-button 
+          variant="base"
+          label="Publish" 
+          onclick={handleClick} 
+        ></lightning-button>
+      </div>
+    </lightning-card>
+</template>
