@@ -1,0 +1,27 @@
+<template>
+  ><lightning-card icon-name="standard:account" variant="base">
+    <div slot="title">
+        Imperative Method With Apex
+    </div>
+    <div>
+      <div>
+        <lightning-input
+          type="search"
+          name="enter-search"
+          onchange={handleKeyChange}
+          label="Account Name"
+        ></lightning-input>
+      </div>
+      <template if:true={accounts}>
+        <template for:each={accounts} for:item="acc">
+          <lightning-layout vertical-align="center" key={acc.id}>
+            <li>
+              {acc.Name}
+              {acc.AccountNumber}
+            </li>
+          </lightning-layout>
+        </template>
+      </template>
+    </div>
+  </lightning-card>
+</template>
